@@ -57,7 +57,7 @@ export default {
   @media(max-width: 768px) {
     padding: 32px 16px;
   }
-  width: 100vw;
+  width: 100%;
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
