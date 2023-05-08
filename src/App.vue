@@ -4,6 +4,8 @@
     <Navigation></Navigation>
     <HomePage></HomePage>
     <AboutMe></AboutMe>
+    <RevievsPage></RevievsPage>
+    <TheFooter></TheFooter>
   </div>
 </template>
 
@@ -11,6 +13,8 @@
 import Navigation from "@/components/TheNavigation.vue";
 import HomePage from "@/pages/HomePage.vue";
 import AboutMe from "@/pages/AboutMe.vue";
+import TheFooter from "@/layouts/TheFooter";
+import RevievsPage from "@/pages/RevievsPage";
 </script>
 
 <style lang="scss">
