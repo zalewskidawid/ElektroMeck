@@ -1,6 +1,6 @@
 <template>
   <section class="homepage-wrapper" id="homepage"
-           :style="{ backgroundImage: 'url(' + require('@/assets/images/home-background.jpg') + ')' }">
+           :style="{ backgroundImage: 'url(' + require('@/assets/images/home-background.jpeg') + ')' }">
     <transition appear @before-enter="beforeEnter" @enter="enter">
       <div class="homepage-container">
         <p class="homepage-typewritter-text">Electro<span class="yellow">Meck</span> to <span class="typed-text">{{typeValue}}</span>
@@ -16,6 +16,7 @@
 
 <script>
 import gsap from 'gsap';
+import { scrollIntoView } from "seamless-scroll-polyfill";
 export default {
   data() {
     return {
@@ -60,15 +61,15 @@ export default {
       }
     },
     scrollToSection(sectionId) {
-      document.getElementById(sectionId).scrollIntoView({behavior: 'smooth'})
+      scrollIntoView(document.getElementById(sectionId), {behavior: 'smooth'});
     },
     beforeEnter(el) {
       el.style.opacity = '0'
-      el.style.transform = 'translateY(-100px)';
+      el.style.transform = 'translateY(-200px)';
     },
     enter(el) {
       gsap.to(el, {
-        duration: 1,
+        duration: 1.5,
         y: 0,
         opacity: 1
       })
@@ -89,7 +90,20 @@ export default {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position-x: left;
+  background-position-x: center;
+  background-position-y: center;
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+  }
 
   .homepage-container {
     display: flex;
@@ -98,6 +112,7 @@ export default {
     flex-direction: column;
     height: 100vh;
     padding-left: 32px;
+    padding-right: 32px;
     position: relative;
     @media(max-width: 768px) {
       padding-left: 16px;
@@ -107,10 +122,17 @@ export default {
       color: white;
       font-size: 48px;
       padding-bottom: 16px;
+      margin-top: 128px;
       span {
         color: $primaryColor;
         text-decoration: underline;
         text-underline-offset: 18px;
+      }
+      @media(max-width: 768px) {
+        font-size: 24px;
+        span {
+          text-underline-offset: 8px;
+        }
       }
     }
 
@@ -136,6 +158,13 @@ export default {
       font-weight: bold;
       color: white;
       padding-bottom: 24px;
+      position: absolute;
+      top: 43%;
+      padding-right: 16px;
+      @media(min-width: 769px) {
+        top: 38%;
+        padding-right: 32px;
+      }
       .yellow {
         color: $primaryColor;
       }
@@ -152,9 +181,13 @@ export default {
       .typing {
         animation: none;
       }
+      @media(max-width: 768px) {
+        font-size: 32px;
+      }
     }
   }
 }
+
 @keyframes cursorBlink {
   49% {background-color: white;}
   50% {background-color: transparent;}

@@ -9,11 +9,13 @@ export default{}
 </script>
 
 <style scoped lang="scss">
-.footer {
+footer {
   position: static;
   bottom: 0;
-  width: 100vw;
-  &__title {
+  width: 100%;
+  border-top: 1px solid white;
+  background: black;
+  .footer__title {
     color: white;
     text-align: center;
     padding: 16px 0;

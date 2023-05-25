@@ -1,11 +1,17 @@
 <template>
   <div class="review-card-container">
-    <div class="review-card-avatar-container">
-      <font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon>
-    </div>
-    <div class="review-card-text-container">
-      <p class="review-card-text-container__text"><slot></slot></p>
-      <p class="review-card-text-container__name"><slot name="advise-name"></slot></p>
+    <div class="review-avatar-and-content-container">
+      <div class="review-card-avatar-container">
+        <font-awesome-icon icon="fa-solid fa-user"></font-awesome-icon>
+      </div>
+      <div class="review-card-text-container">
+        <p class="review-card-text-container__text">
+          <slot></slot>
+        </p>
+        <p class="review-card-text-container__name">
+          <slot name="advise-name"></slot>
+        </p>
+      </div>
     </div>
     <div class="review-stars-container">
       <p class="review-stars-container__title">Ocena:</p>
@@ -16,7 +22,9 @@
         <font-awesome-icon icon="fa-solid fa-bolt"></font-awesome-icon>
         <font-awesome-icon icon="fa-solid fa-bolt"></font-awesome-icon>
       </div>
-      <p class="review-stars-container__review-amount"><slot name="review-amount"></slot></p>
+      <p class="review-stars-container__review-amount">
+        <slot name="review-amount"></slot>
+      </p>
     </div>
   </div>
 </template>
@@ -32,6 +40,7 @@ export default {
 
 <style scoped lang="scss">
 @import "./src/assets/styles/style";
+
 .review-4-5 {
   .review-stars-container {
     .review-stars-bolt-container {
@@ -43,6 +52,7 @@ export default {
     }
   }
 }
+
 .review-card-container {
   position: relative;
   padding: 16px;
@@ -50,17 +60,30 @@ export default {
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 350px;
+  width: 350px;
+  height: 322px;
   padding: 16px;
   flex-wrap: wrap;
   background-color: black;
   margin: 0 16px 16px 16px;
+  transform: translateY(100px);
+  opacity: 0;
   @media(max-width: 1059px) {
     margin: 0 16px 56px 16px;
   }
-
+  @media(max-width: 768px) {
+    max-width: 280px;
+    width: 280px;
+    height: 390px;
+  }
+.review-avatar-and-content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
   .review-card-avatar-container {
     //padding: 16px;
     //border: 1px solid white;
@@ -89,19 +112,23 @@ export default {
       font-weight: bold;
     }
   }
+
   .review-stars-container {
     padding: 10px 0;
     display: flex;
     align-items: flex-start;
     width: 100%;
+
     &__title {
       color: white;
       padding-right: 5px;
     }
+
     &__review-amount {
       color: white;
       padding-left: 6px;
     }
+
     .review-stars-bolt-container {
       svg {
         color: $primaryColor;

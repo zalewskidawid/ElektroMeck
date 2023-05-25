@@ -7,18 +7,20 @@
       <ul v-show="!mobile" class="navigation">
         <li><button @click="scrollToSection('homepage')">Strona główna</button></li>
         <li><button @click="scrollToSection('aboutme')">O mnie</button></li>
-        <li><button>Realizacje</button></li>
-        <li><button>Kontakt</button></li>
+        <li><button @click="scrollToSection('realization-page')">Realizacje</button></li>
+        <li><button @click="scrollToSection('reviewsPage')">Opinie</button></li>
+        <li><button @click="scrollToSection('contactPage')">Kontakt</button></li>
       </ul>
       <div class="icon">
         <font-awesome-icon :icon="['fas', 'bars']" @click="toggleMobileNav" v-show="mobile" :class="{'icon-active' : mobileNav}"></font-awesome-icon>
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><button>Strona główna</button></li>
-          <li><button>O mnie</button></li>
-          <li><button>Realizacje</button></li>
-          <li><button>Kontakt</button></li>
+          <li><button @click="scrollToSectionMobile('homepage')">Strona główna</button></li>
+          <li><button @click="scrollToSectionMobile('aboutme')">O mnie</button></li>
+          <li><button @click="scrollToSectionMobile('realization-page')">Realizacje</button></li>
+          <li><button @click="scrollToSectionMobile('reviewsPage')">Opinie</button></li>
+          <li><button @click="scrollToSection('contactPage')">Kontakt</button></li>
         </ul>
       </transition>
     </nav>
@@ -27,6 +29,7 @@
 
 <script>
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { scrollIntoView } from "seamless-scroll-polyfill";
 export default {
   name: 'TheNavigation',
   components: {FontAwesomeIcon},
@@ -69,15 +72,20 @@ export default {
     },
     scrollToSection(sectionId) {
       const scrollToElement = document.getElementById(sectionId);
-      scrollToElement.scrollIntoView({behavior: 'smooth'})
+      scrollIntoView(scrollToElement, {behavior: 'smooth', block: 'start'});
     },
+    scrollToSectionMobile(sectionId) {
+      const scrollToElement = document.getElementById(sectionId);
+      scrollIntoView(scrollToElement, {behavior: 'smooth'});
+      this.mobileNav = !this.mobileNav;
+    }
   }
 };
 
 </script>
 
 <style lang="scss" scoped>
-@import "./src/assets/styles/style";
+@import "../assets/styles/style";
 .header-logo {
   max-width: 150px;
 }

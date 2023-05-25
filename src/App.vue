@@ -4,17 +4,21 @@
     <Navigation></Navigation>
     <HomePage></HomePage>
     <AboutMe></AboutMe>
+    <RealizationsPage></RealizationsPage>
     <RevievsPage></RevievsPage>
+    <ConactPage></ConactPage>
     <TheFooter></TheFooter>
   </div>
 </template>
 
 <script setup>
-import Navigation from "@/components/TheNavigation.vue";
+import Navigation from "@/layouts/TheNavigation.vue";
 import HomePage from "@/pages/HomePage.vue";
 import AboutMe from "@/pages/AboutMe.vue";
 import TheFooter from "@/layouts/TheFooter";
 import RevievsPage from "@/pages/RevievsPage";
+import ConactPage from "@/pages/ConactPage";
+import RealizationsPage from "@/pages/RealizationsPage";
 </script>
 
 <style lang="scss">
@@ -27,5 +31,6 @@ import RevievsPage from "@/pages/RevievsPage";
 }
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 </style>
