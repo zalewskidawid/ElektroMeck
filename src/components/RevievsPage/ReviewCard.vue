@@ -64,7 +64,7 @@ export default {
   flex-direction: column;
   max-width: 350px;
   width: 350px;
-  height: 322px;
+  min-height: 322px;
   padding: 16px;
   flex-wrap: wrap;
   background-color: black;
@@ -77,7 +77,7 @@ export default {
   @media(max-width: 768px) {
     max-width: 280px;
     width: 280px;
-    height: 390px;
+    min-height: 390px;
   }
 .review-avatar-and-content-container {
   display: flex;
@@ -85,12 +85,6 @@ export default {
   flex-direction: column;
 }
   .review-card-avatar-container {
-    //padding: 16px;
-    //border: 1px solid white;
-    //background: black;
-    //border-radius: 50%;
-    //position: absolute;
-    //top: -36px;
     svg {
       font-size: 36px;
       color: white;

@@ -20,6 +20,7 @@
       </div>
       <div class="contact-info-content">
         <a href="https://www.facebook.com/profile.php?id=100063848838353" target="_blank"><font-awesome-icon icon="fa-brands fa-facebook"></font-awesome-icon></a>
+        <a href="https://www.instagram.com/elektromeck/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" class="instagram-icon"><font-awesome-icon icon="fa-brands fa-instagram"></font-awesome-icon></a>
       </div>
     </div>
   </div>
@@ -97,6 +98,14 @@ export default {
         transition: .3s all ease-in;
         &:hover {
           color: #4267B2;
+        }
+      }
+      .instagram-icon {
+        margin-left: 16px;
+        svg {
+          &:hover {
+            color: #C13584;
+          }
         }
       }
     }

@@ -7,9 +7,9 @@ $thirdColor: black;
   background-color: $primaryColor !important;
 }
 .vel-btns-wrapper .btn__close, .vel-btns-wrapper .btn__next, .vel-btns-wrapper .btn__prev {
-  color: $primaryColor ;
+  color: $primaryColor !important;
   opacity: 1 !important;
   &:hover {
-    color: #846700;
+    color: #846700 !important;
   }
 }

@@ -23,10 +23,10 @@ export default {
         },
         particles: {
           number: {
-            value: 100,
+            value: 70,
           },
           line_linked: {
-            distance: 150,
+            distance: 180,
             enable: true,
             opacity: 0.3,
             color: "#ffca09"

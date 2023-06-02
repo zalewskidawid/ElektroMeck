@@ -3,7 +3,7 @@
            :style="{ backgroundImage: 'url(' + require('@/assets/images/home-background.jpeg') + ')' }">
     <transition appear @before-enter="beforeEnter" @enter="enter">
       <div class="homepage-container">
-        <p class="homepage-typewritter-text">Electro<span class="yellow">Meck</span> to <span class="typed-text">{{typeValue}}</span>
+        <p class="homepage-typewritter-text">ELEKTRO<img :src="require('@/assets/images/justIconLogo.png')"><span class="yellow">MECK</span> to <span class="typed-text">{{typeValue}}</span>
         <span class="cursor" :class="{'typing':typeStatus }">&nbsp;</span></p>
         <h1 class="homepage-subtitle">Jakość to <span>podstawa</span></h1>
         <div class="scroll-to-next-sections-container">
@@ -22,7 +22,7 @@ export default {
     return {
       typeValue: '',
       typeStatus: false,
-      typeArray: ['instalacje elektryczne', 'modernizacja gniazdek', 'wymiana bezpieczników', 'niezawodność', 'bezpieczeństwo'],
+      typeArray: ['instalacje elektryczne', 'instalacje przemysłowe', 'monitoring', 'alarmy', 'instalacje mieszkaniowe', 'usuwanie awarii'],
       typingSpeed: 100,
       erasingSpeed: 100,
       newTextDelay: 2000,
@@ -85,15 +85,17 @@ export default {
 @import "./src/assets/styles/style";
 
 .homepage-wrapper {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  background-position-x: center;
-  background-position-y: center;
   position: relative;
+  background-position-x: center;
   z-index: 1;
+  @media(max-width: 768px) {
+    //background-image: url("@/assets/images/home-mobile.jpg") !important;
+    max-height: 650px;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -107,7 +109,7 @@ export default {
 
   .homepage-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
@@ -116,8 +118,15 @@ export default {
     position: relative;
     @media(max-width: 768px) {
       padding-left: 16px;
+      max-height: 650px;
     }
-
+  img {
+    width: 50px;
+    margin-bottom: -12px;
+    @media(max-width: 768px) {
+      width: 25px;
+    }
+  }
     h1 {
       color: white;
       font-size: 48px;
@@ -159,11 +168,13 @@ export default {
       color: white;
       padding-bottom: 24px;
       position: absolute;
-      top: 43%;
+      top: 39%;
       padding-right: 16px;
+      padding-left: 16px;
       @media(min-width: 769px) {
-        top: 38%;
+        top: 35%;
         padding-right: 32px;
+        padding-left: 32px;
       }
       .yellow {
         color: $primaryColor;
@@ -182,7 +193,7 @@ export default {
         animation: none;
       }
       @media(max-width: 768px) {
-        font-size: 32px;
+        font-size: 26px;
       }
     }
   }
