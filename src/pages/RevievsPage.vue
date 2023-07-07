@@ -20,10 +20,7 @@
             Michał M.
           </template>
           <template #review-amount>5 / 5</template>
-          <template #default>"Nie mogę wystarczająco polecić tej firmy i tego pracownika! Pracował bardzo dokładnie i
-            skrupulatnie, zawsze kładąc nacisk na najdrobniejsze szczegóły. Był bardzo uprzejmy i pomocny, odpowiadając
-            na wszystkie nasze pytania i wyjaśniając każdy krok, który podejmował. Zdecydowanie będziemy korzystać z
-            usług tej firmy w przyszłości!"
+          <template #default>"Bardzo gorąco polecam tę firmę i tego pracownika! Pracował bardzo precyzyjnie i skrupulatnie, zawsze zwracając uwagę na najmniejsze szczegóły. Był niezwykle uprzejmy i pomocny, odpowiadał na wszystkie nasze pytania i wyjaśniał każdy podejmowany krok. Zdecydowanie będziemy korzystać z usług tej firmy w przyszłości!"
           </template>
         </ReviewCard>
         <ReviewCard class="review-4-5 third-review">

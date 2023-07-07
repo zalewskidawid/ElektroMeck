@@ -53,35 +53,111 @@ export default {
       visible: false,
       index: 0,
       electricalInstallations: [
-        require("@/assets/images/realizations_instalacje_elektryczne/instalacje_elektryczne_1.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_2.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_3.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_4.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_5.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_6.jpg"),
-        require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_7.jpg")
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/instalacje_elektryczne_1.jpg"),
+          alt: 'instalacje_elektryczne_1'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_2.jpg"),
+          alt: 'instalacje_elektryczne_2'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_3.jpg"),
+          alt: 'instalacje_elektryczne_3'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_4.jpg"),
+          alt: 'instalacje_elektryczne_4'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_5.jpg"),
+          alt: 'instalacje_elektryczne_5'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_elektryczne/Instalacje_elektryczne_6.jpg"),
+          alt: 'instalacje_elektryczne_6'
+        },
       ],
       industrialInstallations: [
-        require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_1.jpg"),
-        require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_2.jpg"),
-        require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_3.jpg"),
-        require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_4.jpg"),
-        require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_5.jpg"),
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_1.jpg"),
+          alt: 'instalacje_przemyslowe_1'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_2.jpg"),
+          alt: 'instalacje_przemyslowe_2'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_3.jpg"),
+          alt: 'instalacje_przemyslowe_3'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_4.jpg"),
+          alt: 'instalacje_przemyslowe_4'
+        }, {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_5.jpg"),
+          alt: 'instalacje_przemyslowe_5'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/pzremyslowe_6.jpg"),
+          alt: 'instalacje_przemyslowe_6'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_7.jpg"),
+          alt: 'instalacje_przemyslowe_7'
+        },
+        {
+          src: require("@/assets/images/realizations_instalacje_przeemyslowe/przemyslowe_8.jpg"),
+          alt: 'instalacje_przemyslowe_8'
+        },
       ],
       whiteAssembly: [
-        require("@/assets/images/realizations_bialy_montaz/bialy_1.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_2.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_3.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_4.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_5.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_6.jpg"),
-        require("@/assets/images/realizations_bialy_montaz/bialy_7.jpg"),
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_1.jpg"),
+          alt: 'montaz_bialy_1'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_2.jpg"),
+          alt: 'montaz_bialy_2'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_3.jpg"),
+          alt: 'montaz_bialy_3'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_4.jpg"),
+          alt: 'montaz_bialy_4'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_5.jpg"),
+          alt: 'montaz_bialy_5'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_6.jpg"),
+          alt: 'montaz_bialy_6'
+        },
+        {
+          src: require("@/assets/images/realizations_bialy_montaz/bialy_7.jpg"),
+          alt: 'montaz_bialy_7'
+        },
       ],
       monitoring: [
-        require("@/assets/images/realizations_monitoring/monitoring_1.jpg"),
-        require("@/assets/images/realizations_monitoring/monitoring_2.jpg"),
-        require("@/assets/images/realizations_monitoring/monitoring_3.jpg"),
-        require("@/assets/images/realizations_monitoring/monitoring_4.jpg"),
+        {
+          src: require("@/assets/images/realizations_monitoring/monitoring_1.jpg"),
+          alt: 'monitoring_1'
+        },
+        {
+          src: require("@/assets/images/realizations_monitoring/monitoring_2.jpg"),
+          alt: 'monitoring_2'
+        },
+        {
+          src: require("@/assets/images/realizations_monitoring/monitoring_3.jpg"),
+          alt: 'monitoring_3'
+        },
+        {
+          src: require("@/assets/images/realizations_monitoring/monitoring_4.jpg"),
+          alt: 'monitoring_4'
+        },
       ]
     }
   },

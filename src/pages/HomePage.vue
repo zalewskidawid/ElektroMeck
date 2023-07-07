@@ -3,7 +3,7 @@
            :style="{ backgroundImage: 'url(' + require('@/assets/images/home-background.jpeg') + ')' }">
     <transition appear @before-enter="beforeEnter" @enter="enter">
       <div class="homepage-container">
-        <p class="homepage-typewritter-text">ELEKTRO<img :src="require('@/assets/images/justIconLogo.png')"><span class="yellow">MECK</span> to <span class="typed-text">{{typeValue}}</span>
+        <p class="homepage-typewritter-text">ELEKTRO<img :src="require('@/assets/images/justIconLogo.png')" alt="logo-homepage-header"><span class="yellow">MECK</span> to <span class="typed-text">{{typeValue}}</span>
         <span class="cursor" :class="{'typing':typeStatus }">&nbsp;</span></p>
         <h1 class="homepage-subtitle">Jakość to <span>podstawa</span></h1>
         <div class="scroll-to-next-sections-container">
@@ -112,7 +112,7 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 80vh;
     padding-left: 32px;
     padding-right: 32px;
     position: relative;
@@ -122,9 +122,10 @@ export default {
     }
   img {
     width: 50px;
-    margin-bottom: -12px;
+    margin-bottom: -24px;
     @media(max-width: 768px) {
       width: 25px;
+      margin-bottom: -12px;
     }
   }
     h1 {
